@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        
+body {
+    background-color:rgb(12, 12, 70);
+    font-family: Arial, sans-serif;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+            font-size: 15px;
+        }
+        .left-content {
+            flex: 1;
+            padding: 26px;
+            font-size: 25px;
+            color: #fff;
+
+        }
+        .right-content {
+            flex: 1;
+            text-align: right;
+            padding: 20px;
+        }
+        .email-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .email-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .message-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        html {
+            font-size: 62.5%;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        
+        li {
+            list-style: none;
+        }
+        a:hover {
+            transform: scale(1.1);
+          }
+          footer {
+            background-color: black;
+            text-align: left;
+            padding: 20px 0;
+          }
+          
+          footer p {
+            font-size: 16px;
+            color: white;
+            margin: 0;
+          }
+          
+        Ul a { 
+            display: inline-block;
+            padding: 0.9rem 1.2rem;
+            color: var(--dark-one);
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            line-height: 1;
+            transition: 0.3s;
+            transform: scale(1);
+          
+          
+        
+            text-decoration: none;
+            transform: scale(1.1);
+        
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+        
+        
+        .nav-item {
+            margin-left: 5rem;
+        }
+        @media only screen and (max-width: 768px) {
+          .navbar{
+        
+        
+            position: sticky;
+        
+          }
+        }
+        .nav-link{
+            font-size: 1.6rem;
+            font-weight: 400px;
+            color:whitesmoke;
+        }
+        
+        .nav-link:hover{
+            color: #482ff7;
+        }
+        footer {
+            background-color: black;
+            text-align: left;
+            padding: 20px 0;
+          }
+          
+          footer p {
+            font-size: 16px;
+            color: white;
+            margin: 0;
+          }
+          
+    </style>
+</head>
+<body>
+
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" >
+                <img src="blogo.png" alt="logo" height="100" width="100">
+            </a>
+        
+            &nbsp;
+            <ul class="nav-menu">
+                <li class="nav-item">      
+                    <a href="e.html"   class="nav-link">HOME</a>
+    
+    
+                </li>
+                            <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">CONTACT US</a>
+                </li>
+            </ul>&nbsp;
+        </nav>
+    </header>   
+
+
+
+    <div class="contact-container">
+        <div class="left-content">
+            <h1 >Let's Build Amazing Things Together</h1>
+            <p>Nairobi, Kenya</p>
+            <p>+2547 40 491 950</p>
+            <p><a href="mailto:eclipsewebsolutions@outlook.com" style="color: #007bff;">eclipsewebsolutions@outlook.com</a></p>
+        </div>
+        <div class="right-content">
+            <form class="email-form" action="#" method="post">
+                <input type="text" class="email-input" name="name" placeholder="Your Name" required>
+                <br><input type="email" class="email-input" name="email" placeholder="Your Email" required>
+                <textarea class="message-input" name="message" rows="4" placeholder="Your Message" required></textarea>
+                <br><button type="submit" class="submit-button">Send</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Eclipsewebsolutions</p>
+    </footer>
+    
+</body>
+</html>
