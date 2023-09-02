@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Your Web Agency</title>
+
+
+    <style>
+  
+        body {
+            background-color:rgb(12, 12, 70);
+            font-family: Arial, sans-serif;
+        }
+        
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define global styles */
+h1 {
+    font-size: 36px;
+}
+
+section.about {
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+section.team {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.team h2 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.team-member p {
+    font-size: 18px;
+    color: #777;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    section.about {
+        flex-direction: column;
+    }
+    .about-image {
+        margin-top: 20px;
+    }
+    .team-members {
+        flex-direction: column;
+    }
+    .team-member {
+        margin: 10px 0;
+    }
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+li {
+    list-style: none;
+}
+a:hover {
+    transform: scale(1.1);
+  }
+  
+Ul a { 
+    display: inline-block;
+    padding: 0.9rem 1.2rem;
+    color: var(--dark-one);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    transition: 0.3s;
+    transform: scale(1);
+  
+  
+
+    text-decoration: none;
+    transform: scale(1.1);
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.nav-item {
+    margin-left: 5rem;
+}
+@media only screen and (max-width: 768px) {
+  .navbar{
+
+
+    position: sticky;
+
+  }
+}
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400px;
+    color:whitesmoke;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+/* Add this CSS to your existing styles.css file or create a new one */
+
+/* Styling for the Mission section */
+.mission {
+    padding: 40px;
+}
+
+.mission-content {
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+}
+/* Add this CSS to your existing styles.css file or create a new one */
+
+/* Styling for the Goals section */
+.goals {
+    color: white;
+
+    padding: 40px;
+}
+
+.goals-content {
+    text-align: center;
+}
+
+.goals h2 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.goals ul {
+    list-style: none;
+    padding: 0;
+}
+
+.goals li {
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.goals li::before {
+    content: '\2022'; /* Use a bullet point as a list marker */
+    color: #007bff; /* Color for the bullet point */
+    margin-right: 10px;
+}
+footer {
+    background-color: black;
+    text-align: left;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+  }
+  
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" >
+                <img src="blogo.png" alt="logo" height="100" width="100">
+            </a>
+        
+            &nbsp;
+            <ul class="nav-menu">
+                <li class="nav-item">      
+                    <a href="e.html"   class="nav-link">HOME</a>
+    
+    
+                </li>
+                            <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">CONTACT US</a>
+                </li>
+            </ul>&nbsp;
+        </nav>
+    </header>   
+
+
+
+
+
+
+    <section class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>We are a creative web agency specializing in UX/UI design, mobile apps, e-commerce sites, dynamic websites, and CRMs. Our mission is to transform your digital ideas into engaging and user-friendly experiences.</p>
+            <p>At Your Web Agency, we believe in the power of design and technology to drive business success. We work closely with our clients to deliver tailored solutions that exceed their expectations and help them thrive in the digital world.</p>
+            <p>Our team of experts is passionate about creating beautiful and functional digital products that leave a lasting impression. We're here to bring your vision to life and make your online presence stand out.</p>
+        </div>
+        <div class="about-image">
+            <img src="pexels-christina-morillo-1181675.jpg" alt="Web Agency Office">
+        </div>
+        </div>
+    </section>
+
+
+    <section class="mission">
+        <div class="mission-content">
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower businesses and individuals with innovative digital solutions that enhance their online presence, streamline operations, and drive growth. We are committed to creating meaningful and impactful experiences for our clients and their users.</p>
+        </div>
+    </section>
+    <section class="goals">
+        <div class="goals-content">
+            <h2>Our Goals</h2>
+            <ul>
+                <li>Create visually stunning and user-centric designs.</li>
+                <li>Develop high-quality, feature-rich mobile apps and websites.</li>
+                <li>Optimize e-commerce sites for maximum conversions.</li>
+                <li>Build dynamic websites that adapt to changing needs.</li>
+                <li>Provide efficient CRM solutions for improved customer relationships.</li>
+                <li>Stay at the forefront of industry trends and technologies.</li>
+                <li>Deliver exceptional value and results to our clients.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Eclipsewebsolutions</p>
+    </footer>
+    </body>
+</html>

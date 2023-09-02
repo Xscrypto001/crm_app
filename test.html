@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse - Our Work</title>
+    <style>
+
+/* Add your existing CSS styles here */
+
+/* New styles for animations and layout */
+.web3-section {
+  background-color:rgb(12, 12, 70);
+  padding: 100px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20pxsss;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+
+}
+
+.project-info {
+  flex: 1;
+  max-width: 50%;
+  font-size: 25px;
+}
+
+.project-info h1,
+.project-info p {
+  margin-bottom: 20px;
+}
+
+.slide-in {
+  transform: translateX(100%);
+  animation: slide-in 1s ease forwards;
+}
+
+@keyframes slide-in {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.video {
+  flex: 1;
+  max-width: 50%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.stylish-link {
+  text-decoration: none;
+  background-color: #00d8ff; /* Change to your preferred accent color */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.stylish-link:hover {
+  background-color: #0072a2; /* Change to a slightly darker shade for hover */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+  }
+  .slide-in {
+      transform: translateY(100%);
+      animation: slide-in-y 1s ease forwards;
+  }
+  @keyframes slide-in-y {
+      0% {
+          transform: translateY(100%);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  .video {
+      max-width: 100%;
+      margin-top: 20px;
+  }
+}
+
+body {
+  background-color:rgb(12, 12, 70);
+  font-family: Arial, sans-serif;
+}
+
+.header-m {
+  background-color:rgb(12, 12, 70);   
+   color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.header-m h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  position: relative;
+}
+
+.header-m h1 span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 100%;
+  margin-left: 0;
+
+}
+
+.project {
+  background-color: rgb(9, 9, 9,0.5);
+  border: 1px solid  black;
+  border-radius: 8px;
+  margin-left: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+
+}
+
+
+.project img {
+  max-width: 100%;
+}
+
+.project:hover img {
+  transform: translateX(0);
+}
+
+.project-details {
+  flex: 1;
+}
+
+.project h2 {
+  font-size: 70px;
+  color: white;
+
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+}
+
+.project p {
+  font-size: 20px;
+
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+li {
+  list-style: none;
+}
+a:hover {
+  transform: scale(1.1);
+}
+
+Ul a { 
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  color: var(--dark-one);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  transition: 0.3s;
+  transform: scale(1);
+
+
+
+  text-decoration: none;
+  transform: scale(1.1);
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+.nav-item {
+  margin-left: 5rem;
+}
+@media only screen and (max-width: 768px) {
+.navbar{
+
+
+  position: sticky;
+
+}
+}
+.nav-link{
+  font-size: 1.6rem;
+  font-weight: 400px;
+  color:whitesmoke;
+}
+
+.nav-link:hover{
+  color: #482ff7;
+}
+footer {
+  background-color: black;
+  text-align: left;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+/* Styles for the Partners section */
+.partners-section {
+  background-color: #111;
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-logo {
+  margin: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.partner-logo img {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.partner-logo:hover img {
+  transform: scale(1.1);
+}
+
+/* Animation for the partner logos */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply the animation to individual partner logos */
+.partner-logo:nth-child(1) {
+  animation: fadeIn 0.5s 0.5s forwards;
+}
+
+.partner-logo:nth-child(2) {
+  animation: fadeIn 0.5s 1s forwards;
+}
+
+.partner-logo:nth-child(3) {
+  animation: fadeIn 0.5s 1.5s forwards;
+}
+
+/* Add more animations as needed for additional partner logos */
+
+
+    </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <a href="#" >
+            <img src="blogo.png" alt="logo" height="100" width="100">
+        </a>
+    
+        &nbsp;
+        <ul class="nav-menu">
+            <li class="nav-item">      
+                <a href="e.html"   class="nav-link">HOME</a>
+
+
+            </li>
+                        <li class="nav-item">
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">CONTACT US</a>
+            </li>
+        </ul>&nbsp;
+    </nav>
+</header>   
+    <div class="header-m">
+      <h1><i>Our Work</i></h1>
+  </div><br><br>
+
+    <section id="section1" class="web3-section">
+        <div class="content">
+            <div class="project-info">
+              <h1>Burj-alij</h1>
+              <p>A customer employee management system to stimulate their daily <br>work flow with ease  </p>
+            </div>
+            <div class="video">
+                <video autoplay muted loop>
+                    <source src="burjcrm.burjal-khaleej.com_employer_%20-%20Google%20Chrome%202023-07-23%2011-00-02.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="web3-section">
+        <div class="content">
+            <div class="slide-in">
+              <h1>Online SParkle Cyber</h1>
+              <p> An online cyber that solves day to day running of your <br>business without affecting your schedule </p>
+              <br><br>
+                  
+               
+                <a href='https://cyber.sparkleonlinesolutions.com' class="stylish-link"> visit</a> 
+            </div>
+        </div>
+    </section>
+
+    <section id="section3" class="web3-section">
+        <div class="content">
+            <div class="slide-in">
+              <h1>TMT Enterprises</h1>
+               
+               
+              <p>Timatania Enterprises Ltd is a freight forwarding company</p>
+              <br><br>
+              <a href='https://tmtenterprises.co.ke'  class="stylish-link" > visit</a></p>
+             
+            </div>
+        </div>
+    </section>
+ 
+    <footer>
+      <p>&copy; 2023 Eclipsewebsolutions</p>
+  </footer>
+   
+  </body>
+</html>

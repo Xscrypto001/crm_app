@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+
+<style>
+
+
+
+
+
+  .emphasis-animation img {
+    animation: emphasis 2s infinite;
+  }
+  
+  @keyframes emphasis {
+    0% {
+      /* Initial state */
+      transform: scale(1);
+      opacity: 1;
+      filter: hue-rotate(0deg);
+    }
+    
+    25% {
+      /* Scale Up */
+      transform: scale(1.2);
+    }
+    
+    50% {
+      /* Fade In */
+      opacity: 1;
+    }
+    
+    75% {
+      /* Rotate */
+      transform: rotate(90deg);
+    }
+    
+    100% {
+      /* Color Change */
+      filter: hue-rotate(180deg);
+    }
+  }
+  
+  .emphasis-animation img {
+    transition: transform 0.5s, opacity 0.5s, filter 0.5s;
+  }
+  
+  .emphasis-animation img:hover {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 0.8;
+    filter: hue-rotate(180deg);
+  }
+  
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+  <div class="emphasis-animation">
+    <img src="blogo.png" alt="Image 1">
+    <img src="blogo.png" alt="Image 2">
+    <img src="blogo.png" alt="Image 3">
+    <img src="blogo.png" alt="Image 4">
+    <img src="blogo.png" alt="Image 5">
+  </div>
+  
+</body>
+</html>
