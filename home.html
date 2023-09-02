@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 
+        Eclipse Tech - Web Service & Digital Marketing</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+
+
+
+<style>
+  
+    
+
+    body {       
+         scroll-behavior: smooth;
+
+
+        margin: 0;
+        padding: 0;
+        background-color:rgb(12, 12, 74);     
+           font-family: Arial, sans-serif;
+      }
+  
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 62.5%;
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+    }
+   
+
+    li {
+        list-style: none;
+    }
+    a:hover {
+        transform: scale(1.1);
+      }
+      
+    Ul a { 
+        display: inline-block;
+        padding: 0.9rem 1.2rem;
+        color: var(--dark-one);
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 1;
+        transition: 0.3s;
+        transform: scale(1);
+      
+      
+
+        text-decoration: none;
+        transform: scale(1.1);
+
+    }
+
+    #star {
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        width: 250px;
+        height: 250px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #DBE6E0;
+        box-shadow: 0 0 50px rgba(219, 230, 224, 1);
+      }
+      
+      #planet {
+        position: absolute;
+        left: 10px;
+        top: 1px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: #010101;
+        box-shadow: inset 0 0 50px rgba(150, 150, 150, 0.2);
+        animation: eclipse 10s infinite linear;
+        transform-origin: 50% 150%;
+        transform: rotate(-60deg);
+      }
+      
+      @keyframes eclipse {
+        0% {
+             transform: rotate(-40deg); 
+        }
+        
+        90% {
+             transform: rotate(60deg); 
+        }
+        
+        100%{
+          transform: rotate(40deg);
+        }
+      }
+      
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    
+    .nav-item {
+        margin-left: 5rem;
+    }
+    @media only screen and (max-width: 768px) {
+      .navbar{
+
+
+        position: sticky;
+
+      }
+      .bar {
+        position: sticky;
+
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #101010;
+        margin-right: 36px;
+
+    }
+
+        #star {
+            position: absolute;
+            left: 80%;
+            top: 40%;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 50px rgba(219, 230, 224, 1);
+          }
+          
+          #planet {
+            position: absolute;
+            left: 10px;
+            top: 1px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: inset 0 0 50px rgba(150, 150, 150, 0.2);
+            animation: eclipse 10s infinite linear;
+            transform-origin: 50% 150%;
+            transform: rotate(-60deg);
+          }
+
+
+        .nav-menu {
+            height: 100%;
+            position: fixed;
+            left: -100%;
+            top: 1rem;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 6px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 6, 0.06);
+        
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .nav-menu.active {
+            left: 0;
+        }
+    
+        .nav-item {
+            display: none;
+
+
+        }
+        .hamburger-menu {
+            display: none; 
+          }
+    
+       
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+        #hamburger-menu.o {
+            display: block; /* Show the hamburger menu when opened */
+          } 
+
+    }
+    
+    .nav-link{
+        font-size: 1.6rem;
+        font-weight: 400px;
+        color:whitesmoke;
+    }
+    
+    .nav-link:hover{
+        color: #482ff7;
+    }
+    
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+      }
+  
+      .hamburger-menu Ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+  
+      .hamburger-menu ul li {
+        margin-bottom: 20px;
+      }
+  
+      .hamburger-menu ul li:last-child {
+        margin-bottom: 0;
+      }
+  
+      .hamburger-menu ul li a {
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+  
+      .hamburger-menu ul li a:hover {
+        color: #dddddd;
+      }
+  
+    .business-name {
+        text-align: left;
+        padding: 20px;
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+  
+      .slogan {
+        text-align: left;
+        padding: 10px 20px;
+        color: #ffffff;
+        font-size: 25px;
+        line-height: 1.5;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid white;
+      }
+  
+      @keyframes typingAnimation {
+        0% {
+          width: 0;
+        }
+        20% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+  
+      .slogan span {
+        display: block;
+        overflow: hidden;
+      }
+  
+      .slogan span:nth-child(1) {
+        animation: typingAnimation 5s steps(40) forwards;
+      }
+  
+      .slogan span:nth-child(2) {
+        animation: typingAnimation 5s steps(60) forwards;
+      }
+  
+      .slogan span:nth-child(3) {
+        animation: typingAnimation 5s steps(80) forwards;
+      }
+  
+      .slogan span:nth-child(4) {
+        animation: typingAnimation 5s steps(100) forwards;
+      }
+      .slogan span:nth-child(4) {
+        animation: typingAnimation 5s steps(120) forwards;
+      }
+  
+
+  
+      /* Learn more link */
+      .learn-more {
+        text-align: left;
+        padding: 20px;
+      }
+  
+      .learn-more a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        color: #1D1B26;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      .learn-more a:hover {
+        background-color: #dddddd;
+      }
+  
+      /* Image on the left */
+      .image-container {
+        display: flex;
+        align-items: center;
+      }
+  
+      .image-container img {
+        width: 120px;
+        height: auto;
+      }
+      @keyframes typingAnimation {
+        0% {
+          width: 0;
+        }
+        20% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+  
+      .slogan span {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typingAnimation 4s steps(100) forwards;
+      }
+  
+      .slogan span:nth-child(1) {
+        animation-delay: 0s;
+
+    }
+  
+      .slogan span:nth-child(2) {
+        animation-delay: 1s;
+      }
+  
+      .slogan span:nth-child(3) {
+        animation-delay: 3s;
+      }
+  
+      .slogan span:nth-child(4) {
+        animation-delay: 5s;
+      }
+  
+      .slogan span:nth-child(5) {
+        animation-delay: 7s;
+      }
+       .services-container{
+        background-color: #482ff7;
+        border-radius: 12px;
+        border-color: #482ff7;
+
+       }
+       .section-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      
+      .title {
+        position: relative;
+        display: inline-block;
+        padding-top: 1.2rem;
+        line-height: 1;
+        font-size: 2.8rem;
+        margin-bottom: 0.6rem;
+        color:#dddddd;
+
+      }
+      
+      .title:before {
+        content: attr(data-title);
+        display: block;
+        margin-bottom: 0.4rem;
+        color: var(--main-color);
+        font-size: 1.15rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      
+      .title:after {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 5px;
+        border-radius: 3px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .text{
+
+      font-size: 2.3rem;
+
+       color:#E2E8F0;
+
+      }
+      .section-header .text {
+        max-width: 1000px;
+        margin: 0 auto;
+      }.cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      
+      .card-wrap {
+        position: relative;
+        margin: 1.7rem 0.8rem;
+      }
+      .section-header .text ,.title {
+        position: relative;
+        animation: slideIn 2.5s ease-in-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    .card {
+      
+      animation: slideIn 1.5s ease-in-out;
+  }
+  
+    @keyframes slideIn {
+      from {
+          transform: translateX(-100%);
+      }
+      to {
+          transform: translateX(0);
+      }
+  }
+      .card {            
+        background-color: #1D1B26;       
+       font-size: 21px;
+        position: relative;
+        width: 100%;
+        max-width: 390px;
+        min-height: 390px;
+        color: #DBE6E0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+      
+      .card:before {
+        content: attr(data-card);
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--main-color);
+        opacity: 0.025;
+      }
+      
+      .card:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--main-color);
+        transition: 0.3s;
+      }
+      
+      .card-wrap:hover .card {
+        transform: translateY(-15px);
+      }
+      
+      .card-wrap:hover .card:after {
+        height: 8px;
+      }
+      .title-sm {
+        color: #DBE6E0;
+        font-weight: 900;
+        font-size: 1.9rem;
+      }
+/* Add this CSS to your styles.css file or create a new one */
+
+/* Styling for Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.client-name {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Styling for the Call to Action Section */
+.cta {
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #007bff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+
+.reviews-slideshow {
+  display: flex;
+  overflow: hidden;
+}
+
+.review {
+  color: #DBE6E0;
+  width: 100%;
+  padding: 20px;
+  animation: slideAnimation 20s linear infinite;
+}
+
+.review p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.author {
+  text-align: right;
+  margin-top: 10px;
+  font-style: italic;
+  color : black;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Add this CSS to your styles.css file or create a new one */
+
+/* Styling for the Footer */
+footer {
+  background-color: black;
+  text-align: left;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<header class="header">
+    <nav class="navbar">
+        <a href="#" >
+            <img src="blogo.png" alt="logo" height="100" width="100">
+        </a>
+    
+        &nbsp;&nbsp;
+        <ul class="nav-menu">
+            <li class="nav-item">      
+                <a href="e.html"   class="nav-link">HOME</a>
+
+
+            </li>
+           
+                        <li class="nav-item">
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">CONTACT US</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<main>            
+    <div id="hamburger-menu" class="hamburger-menu">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+        <div class="business-name"><i>
+            Eclipse Tech</i>
+          </div>
+          <div class="slogan">
+
+
+            <span>We're dedicated to transforming your digital presence</span>
+
+            <span>and creating unforgettable experiences.From website </span>
+               <span> development and mobile app development to SEO  </span>
+                <span>optimization and digital marketing ,we've got you </span>
+                <span>covered.</span>
+          </div>
+          <div class="learn-more">
+            <a href="about.html">Learn More</a>
+          </div>  
+                      <div id="star">
+            <div id="planet">
+           </div>
+                    </div><br><br><br>
+                
+          
+                    <section class="services section" id="services">
+                      <div class="container">
+                        <div class="section-header">
+                          <h3 class="title" data-title="What We Do">Services</h3>
+                          <p class="text">
+                            We have extensive experience in offering the following services:
+                          </p>
+                        </div>
+              
+              
+              
+              
+              
+              
+                        <div class="cards">
+                          <div class="card-wrap">
+              
+                            
+                            <div class="card" data-card="UI/UX">
+                              <div class="card-content z-index">
+              
+                                 
+                                <h3 class="title-sm">WEB DEVELOPMENT </h3>
+                                <p class="text">
+                                  Need a website? We've got you 
+                                  covered.We'll build you a website 
+                                  that not only looks amazing but
+                                also drives traffic sales .Our  team 
+                                of experts will work with you
+                              every step of the way to ensure  your website is just what you need </p>
+                           
+                                </p>                  
+                                  <a    href={% url 'kra'%}
+              
+              
+                                class="btn small">Get this Service</a>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <div class="card-wrap">
+              
+                          
+                              <div class="card" data-card="UI/UX">
+                                <div class="card-content z-index">
+            
+                                 
+                                  <h3 class="title-sm">MOBILE APP DEVELOPMENT</h3>
+                                  <p class="text">
+                                    Want to take your business to the <
+                                    next level? We'll help you create and app that's perfect for your <br>
+                                    business. We'll work with you to design,develop,and launch an app<br>
+                                    that will help you reach your goals  and connect with your audience
+                                   
+                                  </p>
+                                  <a    href={% url 'ntsa'%}
+                                  class="btn small">Get this Service</a>
+                                </div>
+                              </div>
+                            </div>
+              
+              
+                            <div class="card-wrap">
+                 
+              
+                          
+                              <div class="card" data-card="UI/UX">
+                                <div class="card-content z-index">                
+                                
+              
+                                  
+                                
+                                  <h3 class="title-sm">SEO OPTIMIZATION</h3>
+                                  <p class="text">We'll help you get your website to 
+                                    the top of search engine rankings.Our team of experts will work with<br>
+                                    you to optmize your  website and  content for search engines, so your <br>
+                                    customers can find you easily. We'll also help you create a content<br> starategy
+                                    that will keep your customers coming back for more  
+              </p>
+                                  <a    href={% url "dci" %}
+              
+                                  class="btn small">Get this Service</a>
+                                </div>
+                              </div>
+                            </div>
+              
+              
+                            <div class="card-wrap">
+                         
+                              <div class="card" data-card="UI/UX">
+                                <div class="card-content z-index">             
+                                   
+              
+                                  
+                                
+                                  <h3 class="title-sm">DIGITAL MARKETING</h3>
+                                  <p class="text">
+                                    We'll help you get your business in front of right people.
+                                    Our team of digital marketing experts will <br>work with you to create a strategy<br>
+                                    that drives traffic,sales and brand  awareness. We'll help you create<br>
+                                    the right content, targetthe right audience, and track your results
+                      
+
+                                  </p>
+                                  <a href="#" class="btn small">Get this Service</a>
+                                </div>
+                              </div>
+                            </div>
+              
+              
+                            
+              
+                          <div class="card-wrap">
+                            <div class="card" data-card="Code">
+                              <div class="card-content z-index">
+                                
+                               
+                                <h3 class="title-sm">E-COMERCE DEVELOPMENT</h3>
+                                <p class="text">
+                                  Ready to start online? We'll 
+              help you create an e-comerce  website that's perfect for your 
+              business. We'll work with you to  design,develop and launch an 
+              online store that will help you reach  your goals and connect with your <br>
+              customers
+                                
+                                </p>
+                                <a href="#" class="btn small">Get this Service</a>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <div class="card-wrap">
+                           
+              
+                          
+                            <div class="card" data-card="App">
+                              <div class="card-content z-index">
+                               
+                                
+                                <h3 class="title-sm">UI/UX DESIGN</h3>
+                                <p class="text">
+                                  We'll help you create a user-friendly and intuitive design for your<br>
+                                  website or app. Our team of designers will work with you to 
+                                  create a design that not only looks amazing but also makes it easy for<br>
+                                  your customers to navigate and  find what they're lookong for 
+                    
+                                </p>
+                                <a href="#" class="btn small">Get this Service</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                    </section><br><br>
+
+                    <section class="reviews-slideshow">
+                      <div class="review">
+                        <p>"It was great working with an outstanding team on a web development project, and I couldn't be happier with the results. Their expertise and professionalism shone through every step of the process. They not only delivered a website that looked fantastic but also functioned flawlessly. Their attention to detail, timely communication, and technical know-how made the entire project a breeze. I highly recommend their web development services to anyone in need of a top-notch website."</p>
+                        <p class="author">-  AHMED REZK</p>
+                      </div>
+                      <div class="review">
+                        <p>"It was a privilege of working with this exceptional team on implementing a CRM solution for my business. Their expertise and dedication in setting up a customized CRM system were remarkable. The solution streamlined our processes, improved customer relationships, and boosted our efficiency. Their support and ongoing maintenance have been invaluable to our business success. I highly recommend their CRM services to any business looking for a game-changer."</p>
+                        <p class="author">- Elizabeth Nyabuto</p>
+                      </div>
+                      <div class="review">
+                        <p>"It was great collaborating with this talented team for web design services, and the results were absolutely fantastic. They took my ideas and turned them into a visually stunning website that not only looked great but also delivered an excellent user experience. Their creativity, attention to detail, and commitment to meeting deadlines were truly impressive. I couldn't be happier with the web design work they did for my project."</p>
+                        <p class="author">- Michael Mungai</p>
+                      </div>
+                      <div class="review">
+                        <p>"I had the pleasure of working with this amazing team on a web development project, and the results were outstanding! They transformed my vision into a stunning website that exceeded my expectations. The attention to detail, creativity, and technical expertise they demonstrated throughout the project were truly impressive. I highly recommend their web development services to anyone looking for top-notch quality and professionalism."</p>
+                        <p class="author">- Daniel Kamau</p>
+                      </section>
+
+          <br><br><br><br><br>
+          
+
+
+                    
+                  <section class="cta">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Contact us to discuss your project and discover how we can help you achieve your goals.</p>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </section>
+ </main>  
+
+
+ <footer>
+    <p>&copy; 2023 Eclipsewebsolutions</p>
+</footer>
+ 
+</body>
+
+ 
+
+
+
+<script>
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+    
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+    const hamburger =document.querySelector(".hamburger");
+    const navMenu =document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+
+
+
+
+</script>
+
+
+
+
+</html>
